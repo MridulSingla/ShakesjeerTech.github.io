@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #e7e5e5;
+
+}
+.preloader{
+    width: 8%;
+    height: 20%;
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    margin: -4%;
+    animation: preload 2.5s ease-in-out;
+    display: block;
+}
+.preloader img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes preload {
+    0%{left: -20%;}
+    30%{
+        left: 50%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    50%{
+        left: 50%;
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+    70%{
+        left: 50%;
+        transform: rotate(0deg);
+    }
+    100%{opacity: 1; left: 120%;}
+}
+.loader{
+    animation: load 3s;
+}
+@keyframes load {
+    0%{
+        opacity: 0;
+    }   
+    75%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.navbar{
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+}
+.web-name a{
+    text-decoration: none;
+}
+.brand-name{
+    font-size: 3em;
+    margin: 0 0.5em;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    display: inline;
+    align-items: center;
+    color: white;
+}
+.logo{
+    height: 55px;
+    width: 40px;
+    transform: rotate(8deg);
+    position: relative;
+    top: 14px;
+    left: -24px;
+}
+.navbar-links ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar-links ul li{
+    list-style-type: none;
+    margin: 0;
+}
+.navbar-links ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1.5rem 1rem;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+.arrow-down{
+    display: inline;
+    position: relative;
+    width: 0;
+    height: 0;
+    top: 20px;
+    left: 3px;
+    border-top: 8px solid #f2f2f2;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.navbar-links ul li:hover{
+    background-color: #286fb4;
+}
+.navbar-button{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.navbar-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+}
+@media (max-width: 1050px) {
+    .navbar-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links ul li a{
+        padding-left: 0rem;
+        width: 100%;
+        height: 2.5em;
+        text-align: center;
+        margin: 0px 0 15px 0;
+    }
+    .navbar-links ul li:nth-child(2), .navbar-links ul li:nth-child(3){
+        display: none;
+    }
+    .navbar-links.active{
+        display: flex;
+    }
+}
+.content{
+    display: flex;
+    height: 90.7vh;
+    width: 100vw;
+}
+.text-area{
+    flex: 1;
+}
+.img-box{
+    flex: 1;
+}
+.text-area p{
+    text-transform: uppercase;
+    line-height: 0.7vh;
+    font-size: 9.4vh;
+    font-family: 'Hind', sans-serif;
+    color: #b76eb7;
+    position: relative;
+    top: 27.4vh;
+    left: 3.48vw;
+}
+.comedy{
+    color: #df4c73;
+}
+.text-area p.description{
+    font-size: 2.2vh;
+    text-transform: lowercase;
+    color: black;
+    font-family: serif;
+    line-height: 2.43vh;
+    font-family: 'Rubik', sans-serif;
+    font-stretch: narrower;
+    position: relative;
+    top: 11vh;
+    float: left;
+    left: 17vw;
+}
+.text-area p span.text-end{
+    font-weight: bolder;
+    font-style: oblique;
+    margin-left: -3px;
+}
+.content-img{
+    width: 48.6vw;
+    height: 86vh;
+    object-fit:contain;
+    position: relative;
+    top: 0;
+    left: 0.8vh;
+    float: left;
+    z-index: 4;
+}
